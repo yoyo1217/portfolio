@@ -9,7 +9,7 @@ const AppLayout = () => {
     <div className={`${theme === "dark" ? "dark" : ""}`}>
       <div className="h-screen dark:bg-slate-800">
         <Header />
-        <main className="w-4/5 md:w-full mx-auto dark:bg-slate-800">
+        <main className="w-4/5 mx-auto dark:bg-slate-800">
           <Outlet />
         </main>
       </div>
