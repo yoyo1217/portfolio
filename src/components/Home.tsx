@@ -37,7 +37,7 @@ const Home = () => {
         <Work
           src={"/images/focusbiteicon.png"}
           workTitle="Focus Bite"
-          workUrl="https://chromewebstore.google.com/detail/focus-bite/bbofenleefnnokngmachgjhhkchffabo"
+          workUrl="https://github.com/yoyo1217/focus-bite"
           workDescription="Simple pomodoro timer chrome extension. Boost your productivity with
             the Pomodoro timer extension for your browser."
         />
