@@ -1,24 +1,44 @@
 interface WorkProps {
-  src: string;
+  imageUrl?: string;
+  imageUrlDark?: string;
   workTitle: string;
   workUrl: string;
-  workDescription: string;
+  workDescription?: string;
 }
 
-const Work = ({ src, workTitle, workUrl, workDescription }: WorkProps) => {
+const Work = ({
+  imageUrl,
+  imageUrlDark,
+  workTitle,
+  workUrl,
+  workDescription,
+}: WorkProps) => {
   return (
-    <div>
-      {src && (
-        <img src={src} alt={workTitle} className="w-12 h-12 md:w-18 md:h-18" />
+    <div className="pt-4">
+      {imageUrl && (
+        <div>
+          <img
+            src={imageUrl}
+            alt={workTitle}
+            className="w-12 h-12 md:w-18 md:h-18 block dark:hidden"
+          />
+          <img
+            src={imageUrlDark}
+            alt={workTitle}
+            className="w-12 h-12 md:w-18 md:h-18 hidden dark:block"
+          />
+        </div>
       )}
       <a href={workUrl} className="hover:underline dark:text-white">
-        <h3 className="underline py-3 inline-block hover:font-bold ">
+        <h3 className="underline py-1 inline-block hover:font-bold ">
           {workTitle}
         </h3>
       </a>
-      <p className="text-slate-500 py-3 dark:text-slate-400">
-        {workDescription}
-      </p>
+      {workDescription && (
+        <p className="text-slate-700 py-1 dark:text-slate-400">
+          {workDescription}
+        </p>
+      )}
     </div>
   );
 };
